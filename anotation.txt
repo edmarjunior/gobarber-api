@@ -1,0 +1,11 @@
+## DOCKER
+	# docker ps -a (listar todos containers)
+	# docker ps (lista somente os containers que estão sendo executados)
+	# docker run --name database -e POSTGRES_PASSWORD=docker -p 5432:54322 -d postgres (criar um container contendo 1 imagem do postgres)
+	# docker stop database (parando o container executado acima)
+	# docker start database (inicinando o container)
+
+
+## SEQUELIZE
+	# yarn sequelize migration:create --name=create-files (criar migration para tabela de arquivos)
+	# yarn sequelize db:migrate (rodar as migrations na base de dados)
