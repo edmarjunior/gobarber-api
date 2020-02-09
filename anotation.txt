@@ -1,3 +1,8 @@
+## YARN
+	# baixar (site atual: https://classic.yarnpkg.com/en/) e instalar o yarn como gerenciador de pacotes
+	# yarn (para baixar as dependencias)
+	# yarn dev (para iniciar a aplicação com nodemon)
+
 ## DOCKER
 	# docker ps -a (listar todos containers)
 	# docker ps (lista somente os containers que estão sendo executados)
