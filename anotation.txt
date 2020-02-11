@@ -9,6 +9,7 @@
 	# docker run --name database -e POSTGRES_PASSWORD=docker -p 5432:54322 -d postgres (criar um container contendo 1 imagem do postgres)
 	# docker stop database (parando o container executado acima)
 	# docker start database (inicinando o container)
+	# docker container rm 70155288734a (remove o container com o id 70155288734a)
 
 
 ## SEQUELIZE
