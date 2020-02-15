@@ -15,3 +15,7 @@
 ## SEQUELIZE
 	# yarn sequelize migration:create --name=create-files (criar migration para tabela de arquivos)
 	# yarn sequelize db:migrate (rodar as migrations na base de dados)
+
+
+## DATE-FNS
+	# yarn add date-fns@next (para instalar biblioteca para trabalhar com datas, obs: o @next é só pra pegar a versão mais recente)
