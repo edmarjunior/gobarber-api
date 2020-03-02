@@ -19,3 +19,7 @@
 
 ## DATE-FNS
 	# yarn add date-fns@next (para instalar biblioteca para trabalhar com datas, obs: o @next é só pra pegar a versão mais recente)
+
+
+## TODO:
+	# aplicar paginação na listagem de agendamentos
