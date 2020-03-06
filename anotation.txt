@@ -21,5 +21,10 @@
 	# yarn add date-fns@next (para instalar biblioteca para trabalhar com datas, obs: o @next é só pra pegar a versão mais recente)
 
 
+## MONGODB
+	# docker run --name mongobarber -p 27017:27017 -d -t mongo (criar container com o mongoDb)
+	# yarn add mongoose (instalar ORM para trabalhar com o mongo)
+
+
 ## TODO:
-	# listar agenda do prestador
+	# listar notificações do usuário prestador de serviço
