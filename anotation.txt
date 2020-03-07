@@ -26,5 +26,8 @@
 	# yarn add mongoose (instalar ORM para trabalhar com o mongo)
 
 
+## NODEMAILER
+	# yarn add nodemailer
+
 ## TODO:
 	# listar notificações do usuário prestador de serviço
