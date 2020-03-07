@@ -38,6 +38,10 @@
 	# yarn add bee-queue (para criar filas)
 	# yarn queue (script criado no package.json para processar as filas)
 
+## SENTRY (para monitorar erros em ambiente de produção)
+	# yarn add @sentry/node@5.13.0
+	# yarn add express-async-errors (para o express capturar erros em métodos async)
+	# yarn add youch (para retornar json de internal server error)
 
 ## TODO:
 	# listar notificações do usuário prestador de serviço
