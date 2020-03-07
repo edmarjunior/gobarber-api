@@ -33,6 +33,11 @@
 ## HANDLEBARS (para criação de templates de e-mail)
 	# yarn add express-handlebars nodemailer-express-handlebars (integração do handlebars com o express, e integração do nodemailers com o express-handlebars)
 
+## REDIS
+	# docker run --name redisbarber -p 6379:6379 -d -t redis:alpine
+	# yarn add bee-queue (para criar filas)
+	# yarn queue (script criado no package.json para processar as filas)
+
 
 ## TODO:
 	# listar notificações do usuário prestador de serviço
