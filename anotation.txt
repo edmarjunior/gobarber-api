@@ -26,8 +26,13 @@
 	# yarn add mongoose (instalar ORM para trabalhar com o mongo)
 
 
-## NODEMAILER
+## NODEMAILER (para envio de e-mail)
 	# yarn add nodemailer
+
+
+## HANDLEBARS (para criação de templates de e-mail)
+	# yarn add express-handlebars nodemailer-express-handlebars (integração do handlebars com o express, e integração do nodemailers com o express-handlebars)
+
 
 ## TODO:
 	# listar notificações do usuário prestador de serviço
