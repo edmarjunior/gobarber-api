@@ -43,5 +43,8 @@
 	# yarn add express-async-errors (para o express capturar erros em métodos async)
 	# yarn add youch (para retornar json de internal server error)
 
+## Environment (.env)
+	# yarn add dotenv (para utilizar a variavel global process do node importando no app.js)
+
 ## TODO:
 	# listar notificações do usuário prestador de serviço
