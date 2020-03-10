@@ -46,5 +46,12 @@
 ## Environment (.env)
 	# yarn add dotenv (para utilizar a variavel global process do node importando no app.js)
 
+## Jest (para testes)
+	# yarn add jest -D (instalação somente em ambiente de desenvolvimento)
+	# yarn jest --init
+	# yarn add --dev @sucrase/jest-plugin (para utilizar o import/export)
+	# yarn add -D @types/jest (para utilizar intelisense)
+	# yarn test (executa os testes)
+
 ## TODO:
 	# listar notificações do usuário prestador de serviço
