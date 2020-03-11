@@ -52,6 +52,8 @@
 	# yarn add --dev @sucrase/jest-plugin (para utilizar o import/export)
 	# yarn add -D @types/jest (para utilizar intelisense)
 	# yarn test (executa os testes)
+	# yarn add sqlite3 -D (para utilizar o sqlite)
+	# yarn add supertest -D (para fazer requisições nos testes de integração)
 
 ## TODO:
 	# listar notificações do usuário prestador de serviço
