@@ -4,6 +4,10 @@ import request from 'supertest';
 import app from '../../src/app';
 
 describe('User', () => {
+	beforeEach(async () => {
+		await truncate();
+	});
+
 	it('Deve ser possível realizar o cadastro', async () => {
 		const response = await request(app)
 			.post('/users')
