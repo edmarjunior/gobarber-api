@@ -54,6 +54,7 @@
 	# yarn test (executa os testes)
 	# yarn add sqlite3 -D (para utilizar o sqlite)
 	# yarn add supertest -D (para fazer requisições nos testes de integração)
+	# yarn add factory-girl faker -D (para criar factories e dados fictícios)
 
 ## TODO:
 	# listar notificações do usuário prestador de serviço
