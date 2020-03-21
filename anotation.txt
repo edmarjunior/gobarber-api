@@ -57,4 +57,4 @@
 	# yarn add factory-girl faker -D (para criar factories e dados fictícios)
 
 ## TODO:
-	# listar notificações do usuário prestador de serviço
+	# Bug - Quando dispara exception nos validators em vez de voltar erro 400 volta 500 porque cai no exceptionHandler do app.js
