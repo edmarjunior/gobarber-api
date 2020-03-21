@@ -1,10 +1,8 @@
-import { isBefore, subHours } from 'date-fns';
 import Appointment from '../models/Appointment';
 import User from '../models/User';
 import File from '../models/File';
-import CancellationMail from '../jobs/CancellationMail';
-import Queue from '../../lib/Queue';
 import CreateAppointmentService from '../services/CreateAppointmentService';
+import CancelAppointmentService from '../services/CancelAppointmentService';
 
 class AppointmentController {
 	async index(req, res) {
@@ -51,40 +49,10 @@ class AppointmentController {
 	}
 
 	async delete(req, res) {
-		const appointment = await Appointment.findByPk(req.params.id, {
-			include: [
-				{
-					model: User,
-					as: 'provider',
-					attributes: ['name', 'email'],
-				},
-				{
-					model: User,
-					as: 'user',
-					attributes: ['name'],
-				},
-			],
+		const appointment = await CancelAppointmentService.run({
+			id: req.params.id,
+			userId: req.userId,
 		});
-
-		if (appointment.user_id !== req.userId) {
-			return res.status(401).json({
-				error: 'Você não tem permissão para cancelar esse agendamento',
-			});
-		}
-
-		const hourWithSub = subHours(appointment.date, 2);
-
-		if (isBefore(hourWithSub, new Date())) {
-			return res.status(401).json({
-				error: 'Não é permitido cancelar um agendamento à menos de 2 horas',
-			});
-		}
-
-		appointment.canceled_at = new Date();
-
-		appointment.save();
-
-		await Queue.add(CancellationMail.key, { appointment });
 
 		return res.json(appointment);
 	}
