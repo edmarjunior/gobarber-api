@@ -3,6 +3,7 @@ import Appointment from '../models/Appointment';
 import User from '../models/User';
 import Queue from '../../lib/Queue';
 import CancellationMail from '../jobs/CancellationMail';
+import Cache from '../../lib/Cache';
 
 class CancelAppointmentService {
 	async run({ id, userId }) {
@@ -38,6 +39,12 @@ class CancelAppointmentService {
 		appointment.save();
 
 		await Queue.add(CancellationMail.key, { appointment });
+
+		/**
+		 * Invalidando cache
+		 */
+
+		await Cache.invalidatePrefix(`user:${userId}:appointments`);
 
 		return appointment;
 	}

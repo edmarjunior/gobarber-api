@@ -56,5 +56,9 @@
 	# yarn add supertest -D (para fazer requisições nos testes de integração)
 	# yarn add factory-girl faker -D (para criar factories e dados fictícios)
 
+
+# Cache
+	# yarn add ioredis (cliente para o redis)
+
 ## TODO:
 	# Bug - Quando dispara exception nos validators em vez de voltar erro 400 volta 500 porque cai no exceptionHandler do app.js
