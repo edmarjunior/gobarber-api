@@ -64,6 +64,7 @@
 	# yarn add express-brute express-brute-redis (o primeiro para limitar a quantidade de requisições em uma rota, e o segundo para salvar do redis as informações de limitação)
 	# yarn add helmet (adiciona headers de segurança no response daa requisições)
 	# yarn add express-rate-limit redis rate-limit-redis (express-rate-limit: para limitar a quantidade de requisições em todas as rotas. redis: para passar uma conexão para o express-rate-limit. rate-limit-redis: para configurar a conexão)
+	# yarn add cors (para definir quais front-end podem acessar a api)
 
 ## TODO:
 	# Bug - Quando dispara exception nos validators em vez de voltar erro 400 volta 500 porque cai no exceptionHandler do app.js

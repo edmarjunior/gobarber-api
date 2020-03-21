@@ -1,6 +1,7 @@
 import './bootstrap';
 import express from 'express';
 import path from 'path';
+import cors from 'cors';
 import helmet from 'helmet';
 import redis from 'redis';
 import RateLimit from 'express-rate-limit';
@@ -26,6 +27,11 @@ class App {
 	middlewares() {
 		this.server.use(Sentry.Handlers.requestHandler());
 		this.server.use(helmet());
+		this.server.use(
+			cors({
+				origin: process.env.FRONT_URL,
+			})
+		);
 		this.server.use(express.json());
 		this.server.use(
 			'/files',
