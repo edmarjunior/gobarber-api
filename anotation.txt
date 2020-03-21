@@ -60,5 +60,9 @@
 # Cache
 	# yarn add ioredis (cliente para o redis)
 
+# Segurança
+	# yarn add express-brute express-brute-redis (o primeiro para limitar a quantidade de requisições em uma rota, e o segundo para salvar do redis as informações de limitação)
+	# yarn add helmet (adiciona headers de segurança no response daa requisições)
+
 ## TODO:
 	# Bug - Quando dispara exception nos validators em vez de voltar erro 400 volta 500 porque cai no exceptionHandler do app.js
