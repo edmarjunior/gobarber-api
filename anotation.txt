@@ -66,5 +66,9 @@
 	# yarn add express-rate-limit redis rate-limit-redis (express-rate-limit: para limitar a quantidade de requisições em todas as rotas. redis: para passar uma conexão para o express-rate-limit. rate-limit-redis: para configurar a conexão)
 	# yarn add cors (para definir quais front-end podem acessar a api)
 
+# Segurança no repositório do github
+	# habilitar "Allow GitHub to perform read-only analysis of this repository" e "Security alerts" em Settings > Data services
+	# habilitar "Automated security updates" em Security
+
 ## TODO:
 	# Bug - Quando dispara exception nos validators em vez de voltar erro 400 volta 500 porque cai no exceptionHandler do app.js
