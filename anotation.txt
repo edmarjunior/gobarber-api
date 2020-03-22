@@ -6,7 +6,7 @@
 ## DOCKER
 	# docker ps -a (listar todos containers)
 	# docker ps (lista somente os containers que estão sendo executados)
-	# docker run --name database -e POSTGRES_PASSWORD=docker -p 5432:54322 -d postgres (criar um container contendo 1 imagem do postgres)
+	# docker run --name database -e POSTGRES_PASSWORD=docker -p 5432:54322 -d -t postgres (criar um container contendo 1 imagem do postgres)
 	# docker stop database (parando o container executado acima)
 	# docker start database (inicinando o container)
 	# docker container rm 70155288734a (remove o container com o id 70155288734a)
@@ -72,3 +72,4 @@
 
 ## TODO:
 	# Bug - Quando dispara exception nos validators em vez de voltar erro 400 volta 500 porque cai no exceptionHandler do app.js
+	# Melhoria - utilizar o greenkeeper para automatizar as atualizações de dependencias do package.json
