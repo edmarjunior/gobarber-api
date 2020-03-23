@@ -29,9 +29,7 @@ const bruteStore = new BruteRedis({
 const bruteForce = new Brute(bruteStore);
 
 // rota de ping
-routes.get('/', (req, res) =>
-	res.json({ currentDate: new Date().toLocaleTimeString() })
-);
+routes.get('/', (req, res) => res.send(new Date().toLocaleTimeString()));
 
 routes.post('/users', validateUserStore, UserController.store);
 
