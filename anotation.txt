@@ -73,3 +73,4 @@
 ## TODO:
 	# Bug - Quando dispara exception nos validators em vez de voltar erro 400 volta 500 porque cai no exceptionHandler do app.js
 	# Melhoria - utilizar o greenkeeper para automatizar as atualizações de dependencias do package.json
+	# Criar um dominio para a aplicação e configurar na digital ocean na seção Networking
