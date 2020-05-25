@@ -5,6 +5,7 @@ import BruteRedis from 'express-brute-redis';
 
 import UserController from './app/controllers/UserController';
 import SessionControler from './app/controllers/SessionController';
+import storeRequest from './app/middlewares/storeRequest';
 import authMiddleware from './app/middlewares/auth';
 import multerConfig from './config/multer';
 import FileController from './app/controllers/FileController';
@@ -28,6 +29,8 @@ const bruteStore = new BruteRedis({
 
 const bruteForce = new Brute(bruteStore);
 
+routes.use(storeRequest);
+
 // rota de ping
 routes.get('/', (req, res) =>
 	res.json({ currentDate: new Date().toLocaleTimeString() })
@@ -43,6 +46,7 @@ routes.post(
 );
 
 routes.use(authMiddleware);
+
 
 routes.post(
 	'/appointments',
